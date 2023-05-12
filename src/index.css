@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: vazirMedium;
+        src: url("./font/fonts/webfonts/Vazirmatn-Medium.woff2");
+    },
+
+    @font-face {
+        font-family: vazirBold;
+        src: url("./font/fonts/webfonts/Vazirmatn-Bold.woff2");
+    }
+
+    @font-face {
+        font-family: vazirExtraBold;
+        src: url("./font/fonts/webfonts/Vazirmatn-ExtraBold.woff2");
+    }
+
+    @font-face {
+        font-family: vazirRegular;
+        src: url("./font/fonts/webfonts/Vazirmatn-Regular.woff2");
+    }
+}
+
+@layer components {
+    .menu-mobile li {
+        @apply mb-3 text-[11px] pr-4; 
+    }
+    .menu-mobile-li li {
+        @apply text-[15px] pr-4;
+    }
+    .items-menu {
+        @apply mr-[-16px] bg-gray-200
+    }
+
+    .menu-desktop li {
+        color: #585858;
+        padding: 15px;
+        font-size: 12px;
+        font-weight:500;
+        cursor:pointer;
+        position: relative;
+    }
+    .after-items-menu-desktop  li{
+        content: '';
+        width: 0;
+        height: 2px;
+        margin: 0 auto;
+        background-color: #ef5661;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        left:0;
+        right: 0;
+        bottom:0;
+    }
+    .after-items-menu-desktop  li:hover {
+        @apply w-[90px] animate-borderMenu
+    }
+
+    .items-menu-desktop li {
+        @apply font-vazirRegular text-liDeskMenu text-[13px] mb-3;
+        font-weight:400;
+        cursor:pointer;
+    }
+    .items-menu-desktop li:hover {
+        color:#445f73;
+        font-weight:600;
+    }
+    .items-menu-desktop ul {
+        @apply mt-2.5
+    }
+
+    .menu-desktop-h2 div h2 {
+        color: #00bfd6;
+        padding:7px 2px;
+        font-size : 14px;
+        font-weight:500;
+        box-sizing : border-box;
+        cursor:pointer;
+        font-family:vazirExtraBold;
+    }
+    .menu-desktop-h2 div h2:hover {
+        border-bottom: 1px dashed #00bfd6;
+    }
+
+    .banner-items div {
+        @apply flex flex-col items-center mb-3 
+    }
+    .banner-items div h3 {
+        @apply text-[#296353] text-[14px];
+        font-weight:500;
+    }
+    .banner-items div h3:hover {
+        color:#445f73;
+    }
+    .banner-items div span {
+        color:#2DCEA2;
+        font-size: 12px;
+        margin-top:4px;
+        font-weight:500;
+    }
+
+    .item-pages div img {
+        border-radius: 8px;
+    }
+
+    .images-superMarket img {
+        @apply w-16 p-1.5 rounded-xl lg:mr-2.5;
+        border:1px dashed white;
+    }
+
+    .widgets-div div {
+        @apply mb-8
+    }
+    .widgets-li li {
+        @apply text-gray-700 font-normal lg:font-medium pt-2 text-sm
+    }
+
+}
+
+.f {
+    
+}
