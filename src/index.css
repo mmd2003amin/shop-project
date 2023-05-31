@@ -35,6 +35,11 @@
         @apply mr-[-16px] bg-gray-200
     }
 
+    .navbar-items {
+        @apply cursor-pointer text-white fill-white lg:text-[#8e939b] rounded-md p-2 lg:p-3.5
+        hover:shadow-lg transition-all md:bg-none
+    }
+
     .menu-desktop li {
         color: #585858;
         padding: 15px;
@@ -86,13 +91,10 @@
         border-bottom: 1px dashed #00bfd6;
     }
 
-    .banner-items div {
-        @apply flex flex-col items-center mb-3 
-    }
     .banner-items div h3 {
         @apply text-[#296353] text-[14px];
         font-weight:500;
-    }
+    } 
     .banner-items div h3:hover {
         color:#445f73;
     }
@@ -103,8 +105,11 @@
         font-weight:500;
     }
 
-    .item-pages div img {
-        border-radius: 8px;
+    .pages {
+        @apply grid grid-cols-2  md:grid-cols-4 gap-2.5 md:gap-3 m-3.5 md:m-6 lg:m-8
+    }
+    .item-pages img {
+        @apply rounded-md
     }
 
     .images-superMarket img {
@@ -119,8 +124,81 @@
         @apply text-gray-700 font-normal lg:font-medium pt-2 text-sm
     }
 
-}
+    .form-lg input {
+        @apply mt-8 w-[32%]
+     }
+     .form-sm input {
+        @apply mt-5 rounded-md outline-none bg-stone-100
+         text-blue-950 font-normal w-[75%] li:w-[60%] md:w-1/2 h-10 sm:h-12 pr-3 text-sm
+     }
 
-.f {
-    
-}
+     .form-item span{
+        @apply sm:bg-stone-100 sm:hover:bg-stone-300 transition-all w-1/2 h-10 md:h-12 text-blue-950 p-2.5 text-center
+     }
+
+     .form-completed {
+       @apply border-2 border-solid border-stone-200 focus:border-green-600
+     }
+     .form-unCompleted {
+        @apply border-2 border-solid border-red-600
+      }
+      .link-back {
+        @apply cursor-pointer fixed text-sm sm:text-lg bottom-2 sm:bottom-5 left-2 sm:left-5 text-red-600 border border-solid border-red-600
+         rounded-md p-1 sm:p-2.5;
+      }
+      .link-back-home {
+        @apply cursor-pointer fixed text-sm sm:text-lg bottom-2 sm:bottom-5 right-2 sm:right-5 text-red-600 border border-solid border-red-600
+         rounded-md p-1 sm:p-2.5;
+      }
+
+      .submit-form {
+          @apply rounded-lg md:rounded-2xl bg-cyan-800 hover:bg-cyan-900 transition-all 
+          text-white font-normal w-[70%] li:w-[55%] md:w-1/2 lg:w-[27%] h-10 sm:h-12 pr-3 mt-5 lg:mt-8;
+      }
+
+      .likeT path{
+            @apply cursor-pointer fill-red-600
+      }
+      .likeF path{
+        @apply cursor-pointer fill-black
+      }
+
+      .image-details div {
+        @apply cursor-pointer mr-2 ml-2 md:ml-0 li:mx-auto w-32 lg:w-44 border-2 rounded-md p-1 lg:p-2 border-gray-500 border-solid
+      }
+
+      .items-details span {
+          @apply text-gray-800 md:mb-2 pr-3 text-[13px]
+      }
+
+      .button-addToCart {
+          @apply transition-all rounded-md w-[80%] h-10 p-3 text-white text-sm mb-3
+      }
+
+      .button-addToBeLoved {
+          @apply border border-solid border-black p-2
+      }
+
+      .cart-check {
+          @apply p-4 sm:p-8 border border-gray-300 border-solid rounded-md
+      }
+
+      .total {
+          @apply text-[16px] text-stone-500 font-vazirMedium mt-5 mr-3
+      }
+      .total span {
+          @apply text-green-500
+      }
+
+      .cart-check-button button {
+          @apply bg-green-700 hover:bg-green-800 transition-all rounded-md p-2 text-white font-vazirRegular text-sm
+      }
+
+      .pages-sections {
+          @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 font-vazirMedium mr-10 ml-10
+      }
+
+      .pages-sections-map {
+          @apply pb-9 bg-white hover:shadow-shadowCart transition-all flex flex-col justify-around
+      }
+};

@@ -32,6 +32,7 @@ module.exports = {
         navbar : "0px 0px 20px 0px rgba(0, 0, 0, 0.15)",
         menuDesk: "0 2px 9px 0 rgba(112, 112, 112, .32)",
         new:"0px 0px 0px 0 rgb(0 , 0 , 0),0px 2px 9px 0 rgba(112, 112, 112, .32)",
+        shadowCart: '-3px 3px 16px 1px rgba(0,0,0,0.15)',
       },
 
       screens: {

@@ -101,4 +101,198 @@ function Car() {
     );
   };
 
-export { Temp , Home , Car , Emoji , Basket , BackPack };
+  function Score() {
+    return (
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <g>
+        <path
+          fill="#fff"
+          d="M0 0H24V24H0z"
+          transform="matrix(0 -1 -1 0 24 24)"
+        ></path>
+        <path
+          fill="#ffd700"
+          fillRule="evenodd"
+          d="M11.014 2.767c.365-.877 1.607-.877 1.972 0l1.924 4.618a1 1 0 00.923.615h5.06c.93 0 1.396 1.125.738 1.783l-4.092 4.092a1 1 0 00-.254.982l1.623 5.68c.274.959-.796 1.74-1.626 1.186l-4.727-3.151a1 1 0 00-1.11 0l-4.72 3.146c-.832.555-1.905-.228-1.63-1.19l1.62-5.671a1 1 0 00-.254-.982L2.389 9.803C1.723 9.138 2.194 8 3.135 8h5.032a1 1 0 00.923-.615l1.924-4.618z"
+          clipRule="evenodd"
+        ></path>
+      </g>
+    </svg>
+    );
+  };
+
+  function Like() {
+    return (
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      className="icon"
+      viewBox="0 0 1024 1024"
+    >
+      <path
+        fill="#000000"
+        d="M725.333 192C635.733 192 556.8 236.8 512 307.2 467.2 236.8 388.267 192 298.667 192c-140.8 0-256 115.2-256 256C42.667 701.867 512 960 512 960s469.333-256 469.333-512c0-140.8-115.2-256-256-256z"
+      ></path>
+    </svg>
+    );
+  };
+
+  function Plus({id}) {
+    return (
+      <svg id={id}
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="none"
+        stroke="#000"
+        strokeWidth="0"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <path id={id} fill="#fff" d="M0 0H24V24H0z"></path>
+          <path id={id}
+            fill="#006"
+            fillRule="evenodd"
+            d="M13 9a1 1 0 10-2 0v2H9a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V9zM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12z"
+            clipRule="evenodd"
+          ></path>
+        </g>
+      </svg>
+    );
+  };
+
+  function Minus({id}) {
+    return (
+      <svg 
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <g>
+          <path id={id} fill="#fff" d="M0 0H24V24H0z"></path>
+          <path id={id}
+            fill="#006"
+            fillRule="evenodd"
+            d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12zm6 0a1 1 0 011-1h6a1 1 0 110 2H9a1 1 0 01-1-1z"
+            clipRule="evenodd"
+          ></path>
+        </g>
+      </svg>
+    );
+  }
+
+  function Shield() {
+    return (
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="22"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="M15.5 9.5L11 14l-1.5-1.5M12 3L4 7c0 5.193 2.784 12.51 8 14 5.216-1.49 8-8.807 8-14l-8-4z"
+      ></path>
+    </svg>
+    );
+  }
+
+  function Truck() {
+    return (
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+    >
+      <path d="M15.17 7.36L13 4.92a1.25 1.25 0 00-.94-.42h-2V2.75A1.25 1.25 0 008.82 1.5H1.76A1.25 1.25 0 00.51 2.75v8.5a1.25 1.25 0 001.25 1.25h.33a2.07 2.07 0 002.13 2 2.08 2.08 0 002.14-2H10a2.07 2.07 0 002.13 2 2.08 2.08 0 002.14-2 1.26 1.26 0 001.2-1.25V8.19a1.22 1.22 0 00-.3-.83zM4.22 13.25a.82.82 0 01-.88-.75.82.82 0 01.88-.75.83.83 0 01.89.75.83.83 0 01-.89.75zm4.6-7.58v5.58H5.89a2.17 2.17 0 00-1.67-.75 2.17 2.17 0 00-1.66.75h-.8v-8.5h7.06zm1.25.08h2l1.44 1.63h-3.44zm2.08 7.5a.82.82 0 01-.88-.75.82.82 0 01.88-.75.83.83 0 01.89.75.83.83 0 01-.89.75zm0-2.75a2.17 2.17 0 00-1.66.75h-.42V8.62h4.17v2.63h-.42a2.17 2.17 0 00-1.67-.75z"></path>
+    </svg>
+    );
+  }
+
+  function StoreI() {
+    return (
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="22"
+      viewBox="0 0 16 16"
+    >
+      <g>
+        <path d="M2.49 12h4.33V7.66H2.49zm1.25-3.09h1.83v1.83H3.74zm7.33-1.25a2.43 2.43 0 00-2.43 2.43v3.4H9.9v-3.4a1.18 1.18 0 112.35 0v3.4h1.25v-3.4a2.43 2.43 0 00-2.43-2.43zM2.49 5.07H13.5v1.3H2.49z"></path>
+        <path d="M14.12 2.51H1.88A1.88 1.88 0 000 4.39v9.1h1.25v-9.1a.63.63 0 01.63-.63h12.24a.63.63 0 01.63.63v9.1H16v-9.1a1.88 1.88 0 00-1.88-1.88z"></path>
+      </g>
+    </svg>
+    );
+  }
+
+  function Exclamation() {
+    return (
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="14"
+      height="14"
+      fill="#555"
+      stroke="#555"
+      viewBox="0 0 32 32"
+    >
+      <path d="M15 21.063V6c0-.563.438-1 1-1s1 .438 1 1v15.063h-2zm0 1.968h2v1.875h-2v-1.875zM0 16C0 7.156 7.156 0 16 0s16 7.156 16 16-7.156 16-16 16S0 24.844 0 16zm30.031 0c0-7.719-6.313-14-14.031-14S2 8.281 2 16s6.281 14 14 14 14.031-6.281 14.031-14z"></path>
+    </svg>
+    );
+  }
+
+  function Trash() {
+    return (
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="#000066"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="#000066"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M5 6.773h4.2m9.8 0h-4.2m-5.6 0V5.5a1 1 0 011-1h3.6a1 1 0 011 1v1.273m-5.6 0h5.6M6.4 8.59v7.273c0 1.714 0 2.57.547 3.104.546.532 1.426.532 3.186.532h3.734c1.76 0 2.64 0 3.186-.532.547-.533.547-1.39.547-3.104V8.59m-8.4 1.818v5.455m2.8-5.455v5.455m2.8-5.455v5.455"
+      ></path>
+    </svg>
+    );
+  }
+
+  function Close() {
+    return (
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M15 9l-6 6m6 0L9 9m3 12a9 9 0 100-18 9 9 0 000 18z"
+      ></path>
+    </svg>
+    )
+  }
+
+export { Temp , Home , Car , Emoji , Basket , BackPack , Like , 
+         Plus , Minus , Score , Shield , Truck , StoreI , Exclamation ,
+         Trash , Close };
