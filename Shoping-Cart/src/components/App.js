@@ -3,7 +3,7 @@ import { Route, Routes , Navigate } from "react-router-dom";
 
 //Redux
 import { Provider } from "react-redux";
-import store from "../redux/store";
+import store from "../App/store";
 
 //Components
 import SignIn from "./Forms/SignIn";

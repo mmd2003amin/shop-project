@@ -7,11 +7,11 @@ import { Like , Score } from '../SVG';
 
 //Redux
 import { useSelector , useDispatch } from 'react-redux';
-import { saveToBeloved, removeFromBeloved } from '../../redux/beLoved/dispatchBeLoved';
+import { saveToBeloved, removeFromBeloved } from '../../features/beLoved/beLovedSlice';
 import { Link } from 'react-router-dom';
 
 const Beloved = () => {
-    const state = useSelector(state => state.beLovedState.data);
+    const state = useSelector(state => state.beLovedSlice.data);
     const dispatch = useDispatch();
 
     return (

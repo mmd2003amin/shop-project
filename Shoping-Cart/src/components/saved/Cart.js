@@ -9,12 +9,12 @@ import { Minus, Plus, Trash , Truck , Shield , StoreI } from '../SVG';
 import trashImage from "../../images/trash.svg";
 
 //Redux
-import { removeItem , increase , decrease , clear } from '../../redux/cart/cartDispatch';
+import { removeItem , increase , decrease , clear } from '../../features/cart/cartSlice';
 import { useSelector , useDispatch } from 'react-redux';
 
 const Cart = () => {
     const [ data , setData ] = useState(DataPages);
-    const state = useSelector(state => state.cartState);
+    const state = useSelector(state => state.cartSlice);
     const dispath = useDispatch();
 
     return (
@@ -59,7 +59,7 @@ const Cart = () => {
                 )}
             </div>
             
-            {state.data.length > 0 && 
+            {state.data.length > 0 ? 
                 <div className="cart-check sm:mr-14 lg:mr-0 mb-6 lg:mb-0 mx-auto w-[90%] sm:w-1/2 lg:w-1/4 lg:fixed 
                 top-52 left-32 flex flex-col h-52">
                     <h3 className="total">قیمت کل : <span>{state.totalPrice}</span></h3>
@@ -69,8 +69,7 @@ const Cart = () => {
                         <button onClick={() => dispath(clear())}>پاک کردن همه</button>
                     </div>
                 </div>
-            }
-            {state.totalQuantity === 0 &&
+            :
                 <div className="mx-auto w-[80%]">
                     <div className="flex flex-col items-center w-full p-8 border border-solid border-gray-300 rounded-md mb-10">
                         <img className="w-32 sm:w-auto" src={trashImage} alt="image"/>

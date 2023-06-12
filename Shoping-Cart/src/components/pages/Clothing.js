@@ -5,7 +5,8 @@ import { isInData } from '../helper';
 import { Link } from 'react-router-dom';
 
 //Redux
-import { saveToBeloved , removeFromBeloved } from '../../redux/beLoved/dispatchBeLoved';
+// import { saveToBeloved , removeFromBeloved } from '../../redux/beLoved/dispatchBeLoved';
+import { saveToBeloved , removeFromBeloved } from '../../features/beLoved/beLovedSlice';
 import { useDispatch , useSelector } from 'react-redux';
 
 //Icons
@@ -13,7 +14,7 @@ import { Like , Score } from '../SVG';
 
 const Clothing = () => {
     const [data , setData] = useState(DataClothing);
-    const state = useSelector(state => state.beLovedState.data);
+    const state = useSelector(state => state.beLovedSlice.data);
     const dispatch = useDispatch();
 
     return (

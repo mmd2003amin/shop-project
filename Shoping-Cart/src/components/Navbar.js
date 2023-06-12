@@ -4,7 +4,7 @@ import { DataClothing, DataDigital, DataHealth, DataTool } from "./Data"
 import { v4 } from 'uuid';
 
 //Redux
-import { useDispatch , useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 //Images
 import logo from "../images/logo.png";
@@ -21,8 +21,7 @@ const Navbar = ({openMenu , setOpenMenu}) => {
     const [ search , setSearch ] = useState("");
     const [ openSearch , setOpenSearch ] = useState(false);
 
-    const state = useSelector(state => state);
-    const dispatch = useDispatch();
+    const quantity = useSelector(state => state.cartSlice.totalQuantity);
 
     const menuHandler = () => {
         setOpenMenu(!openMenu)
@@ -70,7 +69,7 @@ const Navbar = ({openMenu , setOpenMenu}) => {
                     <div className="navbar-items bg-red-600 lg:bg-stone-100 hover:bg-red-200 mr-2 lg:mr-4"><Link to="/beLoved"><FcLike /></Link></div>
                     <div className="navbar-items bg-blue-600 lg:bg-stone-100 hover:bg-blue-200 hover:text-blue-900 relative mr-2 lg:mr-4">
                         <Link to="/cart"><BiShoppingBag className="hover:animate-shop" /></Link>
-                        <span className="absolute top-[-8px] left-[-8px] text-white bg-red-700 rounded-full p-1 w-6 h-6 font-vazirMedium text-sm text-center">{state.cartState.totalQuantity}</span>
+                        <span className="absolute top-[-8px] left-[-8px] text-white bg-red-700 rounded-full p-1 w-6 h-6 font-vazirMedium text-sm text-center">{quantity}</span>
                     </div>
                 </div>
             </div>

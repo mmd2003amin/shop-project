@@ -6,8 +6,10 @@ import { DataClothing, DataDigital, DataHealth, DataTool } from '../Data';
 import { Exclamation, Score, Shield , StoreI, Truck } from '../SVG';
 
 //Redux
-import { saveToBeloved , removeFromBeloved } from "../../redux/beLoved/dispatchBeLoved";
-import { addItem, removeItem } from "../../redux/cart/cartDispatch";
+// import { saveToBeloved , removeFromBeloved } from '../../redux/beLoved/dispatchBeLoved';
+import { saveToBeloved , removeFromBeloved } from '../../features/beLoved/beLovedSlice';
+// import { addItem, removeItem } from "../../redux/cart/cartDispatch";
+import { addItem, removeItem } from "../../features/cart/cartSlice";
 import { useSelector , useDispatch } from 'react-redux';
 import { isInData } from "../helper"
 
@@ -60,7 +62,7 @@ const Details = () => {
                         <span>{indexData.item5}</span>
 
                         <div>
-                            {isInData(state.beLovedState.data , indexData.name) ?
+                            {isInData(state.beLovedSlice.data , indexData.name) ?
                                 <button className="bg-red-600 text-white border border-solid 
                                  border-red-600 rounded-md p-2 text-[12px] md:text-sm transition-all m-2"
                                  onClick={() => dispath(removeFromBeloved(indexData))}>
@@ -121,7 +123,7 @@ const Details = () => {
                 </div>
 
                 <div className="flex justify-center">
-                    {isInData(state.cartState.data , indexData.name) ?
+                    {isInData(state.cartSlice.data , indexData.name) ?
                      <button className="bg-green-600 hover:bg-green-700 button-addToCart"
                       onClick={() => dispath(removeItem(indexData))}>
                           به سبد خرید اضافه شد
